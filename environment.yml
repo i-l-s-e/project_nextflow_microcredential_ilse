@@ -1,0 +1,13 @@
+name: clinical-nextflow
+channels:
+  - conda-forge
+dependencies:
+  - r-base=4.2
+  - r-dbplyr
+  - r-dplyr
+  - r-xml2
+  - r-duckdb
+  - r-dbi
+  - r-ranger
+  - duckdb
+  - wget
