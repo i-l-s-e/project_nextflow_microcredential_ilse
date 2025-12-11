@@ -1,0 +1,52 @@
+Warning: Your system is mis-configured: ‘/var/db/timezone/localtime’ is not a symlink
+Warning: ‘/var/db/timezone/localtime’ is not identical to any known timezone file
+
+Information on this package and how to use it:
+https://cran.r-project.org/package=ctrdata
+
+Please respect the requirements and the copyrights of the
+clinical trial registers when using their information. Call
+ctrOpenSearchPagesInBrowser(copyright = TRUE) and visit
+
+https://www.clinicaltrialsregister.eu/disclaimer.html
+https://clinicaltrials.gov/about-site/terms-conditions#usage
+https://www.isrctn.com/page/faqs#using-the-isrctn
+https://euclinicaltrials.eu/about-this-website/
+
+Please cite this package, see citation("ctrdata").
+
+1.25.1
+Warning message:
+Failed to locate timezone database 
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:nodbi’:
+
+    src_postgres, src_sqlite
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:jsonlite’:
+
+    flatten
+
+Querying database (1 fields)...
+Querying database (1 fields)...
+Querying database (1 fields)...
+Querying database (1 fields)...
+Querying database (1 fields)...
+Querying database (1 fields)...
+Querying database (1 fields)...
+Querying database (1 fields)...
+Saved: /kyukon/scratch/gent/503/vsc50317/project_nextflow_microcredential_ilse/work/ad/a6a40d294da9a21d5adc73f23c476b/rawdata.csv
+nodbi: docdb_src 'db' disconnected and shut down. 

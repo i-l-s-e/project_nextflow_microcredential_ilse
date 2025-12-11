@@ -42,13 +42,13 @@ md_sep_row    <- paste(rep("---", length(cols)), collapse = " | ")
 
 # Data rows (coerce to character, preserve NA)
 row_to_md <- function(i) {
-  vals <- top_n[i, cols, drop = TRUE]
+  vals <- out[i, cols, drop = TRUE]
   vals <- vapply(vals, function(x) {
     if (is.na(x)) "NA" else as.character(x)
   }, FUN.VALUE = character(1))
   paste(vals, collapse = " | ")
 }
-md_data_rows <- vapply(seq_len(nrow(top_n)), row_to_md, FUN.VALUE = character(1))
+md_data_rows <- vapply(seq_len(nrow(out)), row_to_md, FUN.VALUE = character(1))
 
 md_table_block <- c(
   paste0("| ", md_header_row, " |"),
