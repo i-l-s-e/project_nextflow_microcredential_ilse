@@ -1,35 +1,77 @@
 #!/usr/bin/env Rscript
-args <- commandArgs(trailingOnly=TRUE)
-input_csv <- args[1]
-outfile <- args[2]
-
+# --- 02_train.R ---------------------------------------------------------------
+# Purpose: Train a Poisson GLM (log link) with optional offset log(subjects_exposed_total)
+#          and auto-switch to Negative Binomial if over-dispersion is detected.
+#          Save the model to RDS.
 library(dplyr)
-library(ranger)
+library(MASS)      # glm.nb
+library(readr)
 
-set.seed(42)
-data <- read.csv(input_csv, stringsAsFactors = FALSE)
+args <- commandArgs(trailingOnly=TRUE)
+infile <- args[1]
+outdir <- args[2]
 
-# make a toy target: length of brief_title > median
-if(nrow(data) < 10){
-  write.csv(data.frame(), outfile, row.names=FALSE)
-  quit(status=0)
+
+model_outfile <- paste0(outdir,"/model_deaths.rds")
+
+# ---- 1) Load prepared data ----
+dat <- read.csv(infile, check.names = FALSE)
+
+# Target & offset
+dat <- dat %>%
+  mutate(
+    deaths_total            = as.integer(deaths_total),
+    subjects_exposed_total  = as.numeric(subjects_exposed_total)
+  )
+
+# Keep rows where we can fit the model
+train <- dat %>%
+  filter(!is.na(deaths_total),
+         !is.na(subjects_exposed_total),
+         subjects_exposed_total > 0)
+
+# Categorical as factors
+train <- train %>%
+  mutate(
+    therapeutic_area = as.factor(therapeutic_area)
+  )
+
+# ---- 2) Build formula (drop id/eudractNumber/condition_text/mortality_percent) ----
+predictors <- c("randomised", "double_blind",
+                "condition_is_diabetes",
+                "therapeutic_area",
+                "nonserious_ae_count")
+
+f_base <- as.formula(paste("deaths_total ~", paste(predictors, collapse = " + ")))
+f_glm  <- update(f_base, . ~ . + offset(log(subjects_exposed_total)))
+
+# ---- 3) Fit Poisson ----
+m_pois <- glm(f_glm, data = train, family = poisson(link = "log"))
+
+# ---- 4) Check over-dispersion and refit NB if needed ----
+overdisp_ratio <- m_pois$deviance / m_pois$df.residual
+use_nb <- is.finite(overdisp_ratio) && (overdisp_ratio > 1.5)
+
+if (use_nb) {
+  message(sprintf("Over-dispersion detected (deviance/df = %.2f). Using Negative Binomial.", overdisp_ratio))
+  model <- MASS::glm.nb(f_glm, data = train)
+  model_type <- "neg_binom"
+} else {
+  message(sprintf("Poisson acceptable (deviance/df = %.2f).", overdisp_ratio))
+  model <- m_pois
+  model_type <- "poisson"
 }
 
-data$target <- as.integer(nchar(data$brief_title) > median(nchar(data$brief_title), na.rm=TRUE))
+# ---- 5) Simple fit summary ----
+cat("\nModel:", model_type, "\n")
+print(summary(model))
 
-# simple features: title_len, cond_count
-feat <- data %>%
-  mutate(title_len = nchar(brief_title), cond_count = ifelse(condition=='',0, 1 + str_count(condition, ';'))) %>%
-  select(title_len, cond_count, target) %>%
-  na.omit()
+# ---- 6) Save model + metadata ----
+ml_out <- list(
+  model     = model,
+  modelType = model_type,
+  predictors = predictors
+)
+saveRDS(ml_out, file = model_outfile)
+message("Saved model: ", normalizePath(model_outfile))
 
-train_idx <- sample(seq_len(nrow(feat)), size = floor(0.8 * nrow(feat)))
-train <- feat[train_idx,]
-test <- feat[-train_idx,]
-
-rf <- ranger::ranger(target ~ ., data = train, num.trees = 50)
-pred <- predict(rf, data = test)$predictions
-
-out <- data.frame(obs = test$target, pred = pred)
-write.csv(out, outfile, row.names=FALSE)
-cat('Wrote predictions to', outfile, '\n')

@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 # -------------------------------
 #  converting data from duckdb
 # -------------------------------
@@ -12,7 +13,13 @@ library(purrr)
 library(tidyr)       
 
 # ---- 1) Connect to your DuckDB file ----
-duckfile <- "~/Nextflow/Nextflow_project/data/clinicaltrials.duckdb"
+# Use a temporary local database
+args <- commandArgs(trailingOnly=TRUE)
+db_file <- args[1]
+outdir <- args[2]
+
+duckfile<-db_file
+
 db <- nodbi::src_duckdb(
   dbdir = duckfile, 
   collection = "studies")  
@@ -28,6 +35,19 @@ fields<-c(
     "adverseEvents.nonSeriousAdverseEvents.nonSeriousAdverseEvent",
     "adverseEvents.reportingGroups.reportingGroup.deathsAllCauses"
 )
+
+#---helper code
+sum_affected_from_nested_tbl <- function(tbl) {
+  if (is.null(tbl)) return(NA_real_)
+  if (!("subjectsAffected" %in% names(tbl[[1]]))) return(NA_real_)
+
+  sum(as.numeric(tbl[[1]][["subjectsAffected"]]), na.rm = TRUE)
+}
+
+
+
+
+
 
 # ---- collect the data ----
 dfs <- lapply(fields, function(p) {
@@ -55,6 +75,9 @@ features <- reduce(dfs,full_join, by="_id")
 
 
 # ---- 7) Save to CSV ----
-outfile <- "~/Nextflow/Nextflow_project/output/rawdata.csv"
+outfile <- paste0(outdir,"/rawdata.csv")
 write.csv(features, outfile, row.names = FALSE)
 message("Saved: ", normalizePath(outfile))
+
+
+

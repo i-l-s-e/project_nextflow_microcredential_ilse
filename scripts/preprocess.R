@@ -1,114 +1,83 @@
+#!/usr/bin/env Rscript 
+#--- 01_preprocess.R ----------------------------------------------------------
+# Purpose: Read rawdata.csv, flatten "x / y / z" counts, engineer features,
+#          and save prepared_data.csv for modeling.
+# ---- Libraries ----
+library(dplyr)
+library(stringr)
+library(readr)
 
+# ---- inputs ----
 args <- commandArgs(trailingOnly=TRUE)
-csvfile <- args[1]
+infile <- args[1]
+outdir <- args[2]
 
-csvfile <- "~/Nextflow/Nextflow_project/output/rawdata.csv"
+outfile <- paste0(outdir,"/prepared_data.csv")
 
-df <- read.csv(csvfile, stringsAsFactors = FALSE)
-
-
-
-
-# Coerce text Yes/No flags from various values
-to_yesno <- function(x) {
-  x <- tolower(as.character(x))
-  case_when(
-    str_detect(x, "random") ~ "Yes",
-    str_detect(x, "yes|double|single|blinded|mask") ~ "Yes",
-    str_detect(x, "no|open") ~ "No",
-    TRUE ~ NA_character_
-  )
-}
-
-# Numeric cleaning
-to_numeric <- function(x) {
-  suppressWarnings(as.numeric(gsub("[^0-9.+-]", "", x)))
-}
-
-
-
-
-# If structured extraction produced mostly NA, build regex fallback from JSON
-need_regex <- sum(!is.na(death_struct$deaths_raw)) == 0
-
-if (need_regex) {
-  # Pull JSON strings (may be big)
-  json_tbl <- DBI::dbGetQuery(con, "SELECT jsondata FROM studies")
-  # For each JSON, capture the first integer appearing within ~40 chars after 'death'
-  death_guess <- map_chr(tolower(json_tbl$jsondata), function(js) {
-    m <- stringr::str_match(js, "(death\\w*\\D{0,40})(\\d{1,5})")
-    if (!is.na(m[1,2])) m[1,3] else NA_character_
+# ---- Helpers ----
+# Sum all numbers found in a string like "183 / 177 / 179" -> 539
+parse_sum_vec <- function(x) {
+  sapply(x, function(s) {
+    if (is.na(s) || nchar(s) == 0) return(NA_real_)
+    nums <- str_extract_all(s, "[0-9]+\\.?[0-9]*")[[1]]
+    if (length(nums) == 0) return(NA_real_)
+    sum(as.numeric(nums))
   })
-  death_struct <- tibble(deaths_raw = death_guess)
 }
 
-# ---- 5) Bind all and normalize predictors ----
+# ---- 1) Load ----
+df_raw <- read.csv(infile, check.names = FALSE, na.strings = c("NA", ""))
 
-features <- bind_cols(
-  eudract_df,
-  phase_df,
-  rand_df,
-  blind_df,
-  dis_df,
-  age_low_df,
-  age_up_df,
-  n_df,
-  fu_df,
-  sae_df,
-  death_struct
-) %>%
-  # Coerce types / tidy text
-  mutate(
-    trial_phase = if_else(is.na(trial_phase), NA_character_, as.character(trial_phase)),
-    randomized  = to_yesno(randomization_raw),
-    blinded     = case_when(
-      str_detect(tolower(blinding_raw %||% ""), "double") ~ "Double",
-      str_detect(tolower(blinding_raw %||% ""), "single") ~ "Single",
-      str_detect(tolower(blinding_raw %||% ""), "open|none|no") ~ "Open",
-      str_detect(tolower(blinding_raw %||% ""), "blind|mask") ~ "Blinded",
-      TRUE ~ NA_character_
-    ),
-    age_lower_limit_years = to_numeric(age_lower_raw),
-    age_upper_limit_years = to_numeric(age_upper_raw),
-    sample_size_total     = to_numeric(sample_size_raw),
-    follow_up_months      = to_numeric(follow_up_raw),
-    serious_ae_count      = to_numeric(serious_ae_raw),
-    deaths_count          = to_numeric(deaths_raw)
-  ) %>%
-  select(
-    eudract_number,
-    trial_phase,
-    randomized,
-    blinded,
-    disease_area,
-    age_lower_limit_years,
-    age_upper_limit_years,
-    sample_size_total,
-    follow_up_months,
-    serious_ae_count,
-    deaths_count
+# Standardize some column names to simpler ones
+df <- df_raw %>%
+  rename(
+    id                  = `_id`,
+    eudractNumber       = `eudractNumber`,
+    randomised          = `e811_randomised`,
+    double_blind        = `e814_double_blind`,
+    therapeutic_area    = `e112_therapeutic_area`,
+    condition_text      = `e11_medical_conditions_being_investigated`,
+    subjectsExposed_raw = `adverseEvents.reportingGroups.reportingGroup.subjectsExposed`,
+    nonSeriousAE_raw    = `adverseEvents.nonSeriousAdverseEvents.nonSeriousAdverseEvent`,
+    deaths_raw          = `adverseEvents.reportingGroups.reportingGroup.deathsAllCauses`
   )
 
-# ---- 6) Derive rates: serious AE % and all-cause mortality % ----
-
-features <- features %>%
+# ---- 2) Flatten multi-arm counts & parse numerics ----
+df <- df %>%
   mutate(
-    serious_ae_rate_percent       = if_else(!is.na(serious_ae_count) & !is.na(sample_size_total) & sample_size_total > 0,
-                                            round(100 * serious_ae_count / sample_size_total, 2), NA_real_),
-    all_cause_mortality_percent   = if_else(!is.na(deaths_count) & !is.na(sample_size_total) & sample_size_total > 0,
-                                            round(100 * deaths_count / sample_size_total, 2), NA_real_)
-  ) %>%
-  # Final column order: 10 predictors + target
-  select(
-    eudract_number,
-    trial_phase,
-    randomized,
-    blinded,
-    disease_area,
-    age_lower_limit_years,
-    age_upper_limit_years,
-    sample_size_total,
-    follow_up_months,
-    serious_ae_rate_percent,
-    all_cause_mortality_percent
+    subjects_exposed_total = parse_sum_vec(subjectsExposed_raw),
+    deaths_total            = parse_sum_vec(deaths_raw),
+    nonserious_ae_count     = readr::parse_number(as.character(nonSeriousAE_raw))
   )
+
+# ---- 3) Basic feature engineering ----
+df <- df %>%
+  mutate(
+    randomised    = as.integer(randomised),       # TRUE/FALSE -> 1/0 (NA stays NA)
+    double_blind  = as.integer(double_blind),
+    therapeutic_area = if_else(is.na(therapeutic_area) | therapeutic_area == "",
+                               "Unknown", therapeutic_area),
+    # simple flag: is the study about diabetes? (captures most variants)
+    condition_is_diabetes = as.integer(
+      str_detect(tolower(coalesce(as.character(condition_text), "")), "diabet")),
+    # optional derived rate (not used as target, but can be a predictor)
+    mortality_percent = if_else(!is.na(deaths_total) & !is.na(subjects_exposed_total) & subjects_exposed_total > 0,
+                                100 * deaths_total / subjects_exposed_total, NA_real_)
+  )
+
+# ---- 4) Keep columns useful for modeling & write ----
+prepared <- df %>%
+  select(
+    id, eudractNumber,
+    randomised, double_blind,
+    therapeutic_area, condition_is_diabetes,
+    subjects_exposed_total, nonserious_ae_count,
+    deaths_total, mortality_percent,
+    condition_text
+  )
+
+# (Optional) drop rows without a target (deaths_total)
+# prepared <- prepared %>% filter(!is.na(deaths_total))
+
+write.csv(prepared, outfile, row.names = FALSE)
+message("Saved: ", normalizePath(outfile))
