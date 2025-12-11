@@ -1,0 +1,39 @@
+"_id","eudractNumber","e811_randomised","e814_double_blind","e112_therapeutic_area","e11_medical_conditions_being_investigated","adverseEvents.reportingGroups.reportingGroup.subjectsExposed","adverseEvents.nonSeriousAdverseEvents.nonSeriousAdverseEvent","adverseEvents.reportingGroups.reportingGroup.deathsAllCauses"
+"2006-002529-21-ES","2006-002529-21",FALSE,FALSE,NA,"Pacientes con cncer de mama metastsico CMm o localmente recurrente LR HER2 negativo que no han recibido quimioterapia previa para el CMm o LC. Locally recurrent or metastatic breast cancer.",NA,NA,NA
+"2007-002997-72-ES","2007-002997-72",TRUE,TRUE,NA,"Cncer de mama metastsico HER2 positivo HER2 positive metastatic breast cancer","396 / 408 / 50",309,"261 / 238 / 14"
+"2007-005182-35-BE","2007-005182-35",TRUE,FALSE,NA,"Resected node-positive or high risk node-negative, invasive HER2-positive breast cancer.","289 / 286 / 1461 / 1436 / 1750 / 1722",548,"10 / 15 / 49 / 46 / 14 / 14"
+"2008-005713-22-ES","2008-005713-22",TRUE,FALSE,NA,"Tratamiento de pacientes con cncer de mama HER-2 positivo localmente avanzado o metastsico que hayan recibido un taxano y trastuzumab tras progresin de la enfermedad.","490 / 488 / 136",118,"305 / 277 / 55"
+"2008-006801-17-BE","2008-006801-17",TRUE,FALSE,"Diseases C - Cancer C04","HER2 positive metastatic breast cancer which has progressed after one line of trastuzumab-based therapy in the metastatic setting","218 / 228",285,"136 / 134"
+"2009-015476-98-BE","2009-015476-98",TRUE,FALSE,"Diseases C - Cancer C04","patients with metastatic HER2 over-expressing breast cancer","337 / 169 / 75",190,"235 / 111 / 3"
+"2009-017905-13-BE","2009-017905-13",TRUE,TRUE,"Diseases C - Cancer C04","First line treatment in HER2 positive progressive or recurrent locally advanced or metastatic breast cancer MBC","361 / 353 / 366",497,"174 / 170 / 170"
+"2010-019577-16-BE","2010-019577-16",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive metastatic breast cancer who have received trastuzumab and endocrine therapy in the neoadjuvant and/or adjuvant setting","123 / 121 / 123",25,"5 / 5 / 8"
+"2010-022902-41-BE","2010-022902-41",TRUE,TRUE,"Diseases C - Cancer C04","Patients with operable HER2-positive primary breast cancer","2405 / 2364",546,"253 / 197"
+"2010-024238-46-DE","2010-024238-46",TRUE,FALSE,"Diseases C - Cancer C04","Patients with initially HER2-negative metastatic breast cancer and HER2-positive circulating tumor cells","48 / 53",48,"40 / 33"
+"2011-000509-29-BE","2011-000509-29",TRUE,FALSE,"Diseases C - Cancer C04","HER2-Positive Metastatic Breast Cancer MBC","403 / 184 / 94",71,"247 / 67 / 55"
+"2011-001965-42-ES","2011-001965-42",TRUE,TRUE,"Diseases C - Cancer C04","Human Epidermal Growth Factor Receptor 2 positive HER2+ metastatic breast cancer MBC","246 / 247 / 164 / 179",103,"4 / 4 / 0 / 2"
+"2011-005328-17-ES","2011-005328-17",FALSE,FALSE,"Diseases C - Cancer C04","HER2-positive primary breast cancer","1864 / 1862 / 707 / 709",513,"28 / 98 / 45 / 6"
+"2011-005334-20-BE","2011-005334-20",FALSE,FALSE,"Diseases C - Cancer C04","Advanced breast cancer metastatic or locally recurrent","1436",13706,"658"
+"2012-001628-37-BE","2012-001628-37",FALSE,FALSE,"Diseases C - Cancer C04","HER2-positive metastatic breast cancer","2002 / 181",200,"1072 / 77"
+"2012-002018-37-BE","2012-002018-37",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive primary breast cancer.","720 / 740",385,"126 / 94"
+"2012-003442-32-FR","2012-003442-32",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive metastatic breast cancer","108 / 113 / 111",37,"1 / 1 / 0"
+"2012-004492-38-BE","2012-004492-38",TRUE,FALSE,"Diseases C - Cancer C04","HER2+ Metastatic Breast Cancer","303 / 311",39,"216 / 240"
+"2012-004902-82-BE","2012-004902-82",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive operable primary breast cancer.","912 / 926",1227,"55 / 45"
+"2013-000123-13-BE","2013-000123-13",FALSE,FALSE,"Diseases C - Cancer C04","TO INVESTIGATE THE AT HOME ADMINISTRTATION  OF TRASTUZUMAB SUBCUTANEOUS VIAL FOR THE TREATMENT OF PATIENTS WITH HER2-POSITIVE EARLY BREAST CANCER.","101",62,"2"
+"2013-000829-31-NL","2013-000829-31",FALSE,FALSE,"Diseases C - Cancer C04","HER2-positive early breast cancer","125",484,"2"
+"2013-001161-16-IT","2013-001161-16",FALSE,FALSE,"Diseases C - Cancer C04","EARLY AND LOCALLY ADVANCED HER2-POSITIVE BREAST CANCER","95 / 20 / 92 / 21",28,"5 / 1 / 0 / 1"
+"2013-001352-34-ES","2013-001352-34",TRUE,TRUE,"Diseases C - Cancer C04","Metastatic Breast Cancer","349 / 353",256,"52 / 60"
+"2014-001458-40-BE","2014-001458-40",FALSE,FALSE,"Diseases C - Cancer C04","HER2POSITIVE METASTATIC OR LOCALLY RECURRENT ADVANCED BREAST CANCER","412",2791,"87"
+"2015-000380-13-BE","2015-000380-13",TRUE,FALSE,"Diseases C - Cancer C04","Metastatic or Locally Advanced HER2-positive Breast Cancer","264 / 266 / 88",143,"204 / 202 / 62"
+"2016-001432-35-BE","2016-001432-35",TRUE,TRUE,"Diseases C - Cancer C04","Triple-Negative Breast Cancer","13 / 10 / 281 / 562 / 12 / 11",456,"11 / 9 / 249 / 480 / 5 / 9"
+"2016-002453-38-BE","2016-002453-38",TRUE,FALSE,"Diseases C - Cancer C04","Metastatic breast cancer with stable brain metastases","90 / 77",85,"60 / 57"
+"2017-001994-18-BE","2017-001994-18",TRUE,FALSE,"Diseases C - Cancer C04","breast tumours","288 / 137",113,"181 / 94"
+"2018-000221-31-BE","2018-000221-31",TRUE,FALSE,"Diseases C - Cancer C04","Unresectable/metastatic breast cancer with human epidermal growth factor receptor 2 HER2-positive expression","404 / 87 / 108",140,"143 / 40 / 46"
+"2018-000222-61-BE","2018-000222-61",TRUE,FALSE,"Diseases C - Cancer C04","Unresectable/metastatic breast cancer with human epidermal growth factor receptor 2 HER2-positive expression","257 / 261",144,"72 / 97"
+"2018-003069-33-BE","2018-003069-33",TRUE,FALSE,"Diseases C - Cancer C04","Unresectable and/or metastatic breast cancer that is human epidermal growth factor receptor 2 HER2-low","371 / 172",181,"149 / 90"
+"2020-002818-41-DE","2020-002818-41",TRUE,TRUE,"Diseases C - Cancer C04","Locally advanced / metastatic breast cancer","47 / 49",4,"6 / 3"
+"2021-000398-10-BE","2021-000398-10",TRUE,TRUE,"Diseases C - Cancer C04","Breast cancer",NA,NA,NA
+"2005-002084-85-DK",NA,TRUE,FALSE,NA,"Patients with HER2 positive metastatic breast cancer and progression after previous treatment with trastuzumab",NA,NA,NA
+"2011-005189-39-ES",NA,TRUE,FALSE,"Diseases C - Cancer C04","HER 2 - positive metastatic breast cancer",NA,NA,NA
+"2014-002249-22-DE",NA,TRUE,FALSE,"Diseases C - Cancer C04","Patients with HER2-positive and hormone-receptor positive metastatic breast cancer",NA,NA,NA
+"2019-002741-37-BE",NA,TRUE,TRUE,"Diseases C - Cancer C04","HER2-positive advanced breast cancer",NA,NA,NA
+"2020-005048-46-BE",NA,FALSE,FALSE,"Diseases C - Cancer C04","Treatment of patients with HER2-positive breast cancer with or without brain metastasis",NA,NA,NA

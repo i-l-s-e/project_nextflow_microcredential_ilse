@@ -1,0 +1,12 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Saved: /kyukon/scratch/gent/503/vsc50317/project_nextflow_microcredential_ilse/work/40/7de0ba7f82bc9c3bcb63de38dec8c8/results.csv

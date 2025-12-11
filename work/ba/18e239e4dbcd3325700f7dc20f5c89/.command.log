@@ -1,0 +1,26 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+# A tibble: 31 × 3
+   id                eudractNumber  predicted_deaths
+   <chr>             <chr>                     <dbl>
+ 1 2007-002997-72-ES 2007-002997-72            297. 
+ 2 2007-005182-35-BE 2007-005182-35           3350. 
+ 3 2008-005713-22-ES 2008-005713-22            518. 
+ 4 2008-006801-17-BE 2008-006801-17            193. 
+ 5 2009-015476-98-BE 2009-015476-98            249. 
+ 6 2009-017905-13-BE 2009-017905-13            350. 
+ 7 2010-019577-16-BE 2010-019577-16            155. 
+ 8 2010-022902-41-BE 2010-022902-41           1554. 
+ 9 2010-024238-46-DE 2010-024238-46             42.8
+10 2011-000509-29-BE 2011-000509-29            289. 
+# ℹ 21 more rows
+Saved: /kyukon/scratch/gent/503/vsc50317/project_nextflow_microcredential_ilse/work/ba/18e239e4dbcd3325700f7dc20f5c89/results.csv

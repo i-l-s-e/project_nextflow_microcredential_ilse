@@ -16,7 +16,7 @@ include { install ; download_data; convert_data }   from "./modules/load_module.
 workflow {
 
 def scriptdir = channel.fromPath(params.scriptsdir)
-
+def outdir = channel.fromPath(params.outdir)
 
 install(scriptdir)
 download_data(install.out.db_file,scriptdir)
@@ -25,8 +25,16 @@ preprocess(convert_data.out.raw_file,scriptdir)
 train_model(preprocess.out.prep_file,scriptdir)
 predict(preprocess.out.prep_file,train_model.out.model_file,scriptdir)
 write(predict.out.res_file,scriptdir)
-//def res = channel.fromP(file(write.out))
-  //  .view()
+
+println "You can find all following input data, preprocessed data and results file in this folder: "
+outdir.view()
+def outfiles_csv = channel.fromPath("${params.outdir}/*.csv")
+def outfiles_txt = channel.fromPath("${params.outdir}/*.txt")
+outfiles_csv.mix(outfiles_txt).collect().view()
+
+write.out.splitText().view()
+//write.out.map{p<-file(p).readLines()}
+//  .view()
 }
 
 
