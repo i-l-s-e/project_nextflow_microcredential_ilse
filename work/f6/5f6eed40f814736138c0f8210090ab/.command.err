@@ -1,0 +1,20 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘MASS’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+Over-dispersion detected (deviance/df = 217.86). Using Negative Binomial.
+Saved model: /kyukon/scratch/gent/503/vsc50317/project_nextflow_microcredential_ilse/work/f6/5f6eed40f814736138c0f8210090ab/model_deaths.rds

@@ -3,13 +3,13 @@ process train_model {
   container params.container
   input:
   path(csvfile2)
-  path(scriptsdir)
+  
 
   output:
   path "model_deaths.rds", emit: model_file
 
   script:
   """
-  Rscript ${scriptsdir}/train_model.R ${csvfile2} .
+  Rscript ${params.scriptsdir}/train_model.R ${csvfile2} .
   """
 }

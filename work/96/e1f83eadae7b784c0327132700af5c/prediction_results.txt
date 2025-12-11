@@ -1,0 +1,8 @@
+Prediction Results
+Generated on 2025-12-11 21:11 UTC
+
+Total records: 67
+Mean predicted deaths: 190.4659
+Median predicted deaths: 46.31823
+Range (min–max): 0.000000000000001092572–1,977.511
+

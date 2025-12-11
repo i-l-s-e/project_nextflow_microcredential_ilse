@@ -20,10 +20,14 @@ library(jsonlite)
 library(purrr)       
 library(tidyr)    
 
+
+
+
 # Use a temporary local database
 args <- commandArgs(trailingOnly=TRUE)
 db_file <- args[1]
 outdir<-args[2]
+condition <- args[3]
 #duckfile<-paste0(outdir,"/clinicaltrials.duckdb")
 duckfile<-db_file
 
@@ -36,7 +40,7 @@ db <- nodbi::src_duckdb(
 
 
 queries <- ctrGenerateQueries(
-        condition="HER2-positive metastatic breast cancer",
+        condition=condition,
         phase="phase 3",
         recruitment ="completed",
         onlyMedIntervTrials = TRUE)

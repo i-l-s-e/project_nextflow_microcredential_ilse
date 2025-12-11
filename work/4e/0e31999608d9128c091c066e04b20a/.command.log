@@ -1,0 +1,51 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘MASS’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+Over-dispersion detected (deviance/df = 309.03). Using Negative Binomial.
+
+Model: neg_binom 
+
+Call:
+MASS::glm.nb(formula = f_glm, data = train, init.theta = 0.6351271262, 
+    link = log)
+
+Coefficients: (1 not defined because of singularities)
+                          Estimate Std. Error z value Pr(>|z|)    
+(Intercept)             -2.009e+00  5.446e-01  -3.689 0.000225 ***
+randomised               1.056e+00  5.947e-01   1.776 0.075725 .  
+double_blind            -4.760e-01  4.235e-01  -1.124 0.261065    
+condition_is_diabetes           NA         NA      NA       NA    
+therapeutic_areaUnknown  2.781e-01  7.557e-01   0.368 0.712839    
+nonserious_ae_count      8.392e-05  1.013e-04   0.828 0.407439    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(0.6351) family taken to be 1)
+
+    Null deviance: 57.324  on 44  degrees of freedom
+Residual deviance: 54.073  on 40  degrees of freedom
+AIC: 555.02
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  0.635 
+          Std. Err.:  0.119 
+
+ 2 x log-likelihood:  -543.019 
+Saved model: /kyukon/scratch/gent/503/vsc50317/project_nextflow_microcredential_ilse/work/4e/0e31999608d9128c091c066e04b20a/model_deaths.rds

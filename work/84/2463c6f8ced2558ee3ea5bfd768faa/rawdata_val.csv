@@ -1,0 +1,13 @@
+"_id","eudractNumber","e811_randomised","e814_double_blind","e112_therapeutic_area","e11_medical_conditions_being_investigated","adverseEvents.reportingGroups.reportingGroup.subjectsExposed","adverseEvents.nonSeriousAdverseEvents.nonSeriousAdverseEvent","adverseEvents.reportingGroups.reportingGroup.deathsAllCauses"
+"2006-002529-21-ES","2006-002529-21",FALSE,FALSE,NA,"Pacientes con cncer de mama metastsico CMm o localmente recurrente LR HER2 negativo que no han recibido quimioterapia previa para el CMm o LC. Locally recurrent or metastatic breast cancer.",NA,NA,NA
+"2011-005334-20-BE","2011-005334-20",FALSE,FALSE,"Diseases C - Cancer C04","Advanced breast cancer metastatic or locally recurrent","1436",13706,"658"
+"2012-001628-37-BE","2012-001628-37",FALSE,FALSE,"Diseases C - Cancer C04","HER2-positive metastatic breast cancer","2002 / 181",200,"1072 / 77"
+"2013-004679-11-IT","2013-004679-11",TRUE,TRUE,"Diseases C - Cancer C04","HER2-Positive Breast Cancer Early Stage","113 / 112",107,"1 / 0"
+"2014-001458-40-BE","2014-001458-40",FALSE,FALSE,"Diseases C - Cancer C04","HER2POSITIVE METASTATIC OR LOCALLY RECURRENT ADVANCED BREAST CANCER","412",2791,"87"
+"2015-000380-13-BE","2015-000380-13",TRUE,FALSE,"Diseases C - Cancer C04","Metastatic or Locally Advanced HER2-positive Breast Cancer","264 / 266 / 88",143,"204 / 202 / 62"
+"2016-003984-20-DE","2016-003984-20",TRUE,FALSE,"Diseases C - Cancer C04","Advanced or Metastatic Gastric Cancer","151 / 307",108,"134 / 283"
+"2018-000221-31-BE","2018-000221-31",TRUE,FALSE,"Diseases C - Cancer C04","Unresectable/metastatic breast cancer with human epidermal growth factor receptor 2 HER2-positive expression","404 / 87 / 108",140,"143 / 40 / 46"
+"2020-004035-24-BE","2020-004035-24",TRUE,TRUE,"Diseases C - Cancer C04","High-Risk, Node-Positive, HR+, HER2+ Breast Cancer","55 / 56",18,"0 / 0"
+"2005-002084-85-DK",NA,TRUE,FALSE,NA,"Patients with HER2 positive metastatic breast cancer and progression after previous treatment with trastuzumab",NA,NA,NA
+"2012-003679-21-DE",NA,FALSE,FALSE,"Diseases C - Cancer C04","Early primary breast cancer, hormone receptor positve or negative, HER2 negative, any nodal status",NA,NA,NA
+"2021-000603-21-ES",NA,TRUE,FALSE,"Diseases C - Cancer C04","Early stage HER2-positive breast cancer T stage  T3, lymph node positive, or inflammatory",NA,NA,NA

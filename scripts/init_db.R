@@ -17,6 +17,7 @@ library(tidyr)
 args <- commandArgs(trailingOnly=TRUE)
 db_file <- args[1]
 outdir <- args[2]
+split  <- as.numeric(args[3])
 
 duckfile<-db_file
 
@@ -74,10 +75,25 @@ dfs[[7]][[2]] <- map_dbl(flattened, ~ .x)
 features <- reduce(dfs,full_join, by="_id")
 
 
+#---split data into train and validation set 
+#---note that you can also choose to create a prediction from new studies
+#---as long as you follow the structure of the raw data
+set.seed(123)  # for reproducibility
+train_index <- sample(seq_len(nrow(features)), size = split * nrow(features))  # 80% train
+train_set <- features[train_index, ]
+if (split!=1) {
+    validation_set <- features[-train_index, ]
+}
+
+
+
 # ---- 7) Save to CSV ----
 outfile <- paste0(outdir,"/rawdata.csv")
-write.csv(features, outfile, row.names = FALSE)
+write.csv(train_set, outfile, row.names = FALSE)
 message("Saved: ", normalizePath(outfile))
 
+outfile <- paste0(outdir,"/rawdata_val.csv")
+write.csv(validation_set, outfile, row.names = FALSE)
+message("Saved: ", normalizePath(outfile))
 
 

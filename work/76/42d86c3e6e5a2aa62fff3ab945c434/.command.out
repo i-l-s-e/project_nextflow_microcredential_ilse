@@ -1,0 +1,115 @@
+
+Model: neg_binom 
+
+Call:
+MASS::glm.nb(formula = f_glm, data = train, init.theta = 0.7321393809, 
+    link = log)
+
+Coefficients:
+                                                                                                   Estimate
+(Intercept)                                                                                      -3.143e+00
+randomised                                                                                        1.390e+00
+double_blind                                                                                     -2.578e-01
+condition_is_diabetes                                                                            -3.747e+01
+therapeutic_areaDiseases C - Bacterial Infections and Mycoses C01                                -6.763e+00
+therapeutic_areaDiseases C - Blood and lymphatic diseases C15                                    -2.533e+00
+therapeutic_areaDiseases C - Cancer C04                                                           9.690e-01
+therapeutic_areaDiseases C - Cardiovascular Diseases C14                                         -1.250e+00
+therapeutic_areaDiseases C - Congenital, Hereditary, and Neonatal Diseases and Abnormalities C16 -3.626e+01
+therapeutic_areaDiseases C - Digestive System Diseases C06                                       -3.735e+01
+therapeutic_areaDiseases C - Immune System Diseases C20                                          -4.134e-01
+therapeutic_areaDiseases C - Nervous System Diseases C10                                         -3.903e+01
+therapeutic_areaDiseases C - Nutritional and Metabolic Diseases C18                              -1.626e+00
+therapeutic_areaDiseases C - Respiratory Tract Diseases C08                                      -3.868e+01
+therapeutic_areaDiseases C - Virus Diseases C02                                                  -3.117e+00
+therapeutic_areaUnknown                                                                           4.404e-01
+nonserious_ae_count                                                                               1.042e-04
+                                                                                                 Std. Error
+(Intercept)                                                                                       7.543e-01
+randomised                                                                                        4.779e-01
+double_blind                                                                                      4.124e-01
+condition_is_diabetes                                                                             1.199e+07
+therapeutic_areaDiseases C - Bacterial Infections and Mycoses C01                                 1.763e+00
+therapeutic_areaDiseases C - Blood and lymphatic diseases C15                                     1.728e+00
+therapeutic_areaDiseases C - Cancer C04                                                           7.871e-01
+therapeutic_areaDiseases C - Cardiovascular Diseases C14                                          1.168e+00
+therapeutic_areaDiseases C - Congenital, Hereditary, and Neonatal Diseases and Abnormalities C16  1.704e+07
+therapeutic_areaDiseases C - Digestive System Diseases C06                                        1.704e+07
+therapeutic_areaDiseases C - Immune System Diseases C20                                           1.201e+00
+therapeutic_areaDiseases C - Nervous System Diseases C10                                          1.704e+07
+therapeutic_areaDiseases C - Nutritional and Metabolic Diseases C18                               1.309e+00
+therapeutic_areaDiseases C - Respiratory Tract Diseases C08                                       1.704e+07
+therapeutic_areaDiseases C - Virus Diseases C02                                                   9.287e-01
+therapeutic_areaUnknown                                                                           9.619e-01
+nonserious_ae_count                                                                               9.197e-05
+                                                                                                 z value
+(Intercept)                                                                                       -4.167
+randomised                                                                                         2.908
+double_blind                                                                                      -0.625
+condition_is_diabetes                                                                              0.000
+therapeutic_areaDiseases C - Bacterial Infections and Mycoses C01                                 -3.837
+therapeutic_areaDiseases C - Blood and lymphatic diseases C15                                     -1.466
+therapeutic_areaDiseases C - Cancer C04                                                            1.231
+therapeutic_areaDiseases C - Cardiovascular Diseases C14                                          -1.070
+therapeutic_areaDiseases C - Congenital, Hereditary, and Neonatal Diseases and Abnormalities C16   0.000
+therapeutic_areaDiseases C - Digestive System Diseases C06                                         0.000
+therapeutic_areaDiseases C - Immune System Diseases C20                                           -0.344
+therapeutic_areaDiseases C - Nervous System Diseases C10                                           0.000
+therapeutic_areaDiseases C - Nutritional and Metabolic Diseases C18                               -1.243
+therapeutic_areaDiseases C - Respiratory Tract Diseases C08                                        0.000
+therapeutic_areaDiseases C - Virus Diseases C02                                                   -3.357
+therapeutic_areaUnknown                                                                            0.458
+nonserious_ae_count                                                                                1.133
+                                                                                                 Pr(>|z|)
+(Intercept)                                                                                      3.08e-05
+randomised                                                                                       0.003634
+double_blind                                                                                     0.531955
+condition_is_diabetes                                                                            0.999998
+therapeutic_areaDiseases C - Bacterial Infections and Mycoses C01                                0.000125
+therapeutic_areaDiseases C - Blood and lymphatic diseases C15                                    0.142731
+therapeutic_areaDiseases C - Cancer C04                                                          0.218310
+therapeutic_areaDiseases C - Cardiovascular Diseases C14                                         0.284401
+therapeutic_areaDiseases C - Congenital, Hereditary, and Neonatal Diseases and Abnormalities C16 0.999998
+therapeutic_areaDiseases C - Digestive System Diseases C06                                       0.999998
+therapeutic_areaDiseases C - Immune System Diseases C20                                          0.730756
+therapeutic_areaDiseases C - Nervous System Diseases C10                                         0.999998
+therapeutic_areaDiseases C - Nutritional and Metabolic Diseases C18                              0.213980
+therapeutic_areaDiseases C - Respiratory Tract Diseases C08                                      0.999998
+therapeutic_areaDiseases C - Virus Diseases C02                                                  0.000789
+therapeutic_areaUnknown                                                                          0.647076
+nonserious_ae_count                                                                              0.257126
+                                                                                                    
+(Intercept)                                                                                      ***
+randomised                                                                                       ** 
+double_blind                                                                                        
+condition_is_diabetes                                                                               
+therapeutic_areaDiseases C - Bacterial Infections and Mycoses C01                                ***
+therapeutic_areaDiseases C - Blood and lymphatic diseases C15                                       
+therapeutic_areaDiseases C - Cancer C04                                                             
+therapeutic_areaDiseases C - Cardiovascular Diseases C14                                            
+therapeutic_areaDiseases C - Congenital, Hereditary, and Neonatal Diseases and Abnormalities C16    
+therapeutic_areaDiseases C - Digestive System Diseases C06                                          
+therapeutic_areaDiseases C - Immune System Diseases C20                                             
+therapeutic_areaDiseases C - Nervous System Diseases C10                                            
+therapeutic_areaDiseases C - Nutritional and Metabolic Diseases C18                                 
+therapeutic_areaDiseases C - Respiratory Tract Diseases C08                                         
+therapeutic_areaDiseases C - Virus Diseases C02                                                  ***
+therapeutic_areaUnknown                                                                             
+nonserious_ae_count                                                                                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for Negative Binomial(0.7321) family taken to be 1)
+
+    Null deviance: 174.426  on 64  degrees of freedom
+Residual deviance:  66.565  on 48  degrees of freedom
+  (2 observations deleted due to missingness)
+AIC: 588.11
+
+Number of Fisher Scoring iterations: 1
+
+
+              Theta:  0.732 
+          Std. Err.:  0.144 
+
+ 2 x log-likelihood:  -552.111 

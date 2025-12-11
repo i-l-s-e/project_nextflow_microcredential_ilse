@@ -5,7 +5,7 @@
 ## Overview
 This pipeline automates the following steps:
 1. **Install local server to imitate a redshift SQL or AWS SQL kind of server**
-2. **Download public data from clinical trials (ctgov)** 
+2. **Download public data from clinical trials (ctgov) regarding the condition you are interested in** 
 3. **convert data into a workable csv file**
 4. **Preprocess data**
 5. **Train a predictive model**
@@ -41,6 +41,9 @@ Default parameters in `main.nf`:
 params.outdir    = "${projectDir}/output"
 params.scriptsdir = "${projectDir}/scripts/"
 params.datadir    = "${projectDir}/data/"
+params.cond        = "HER2-positive metastatic breast cancer"    //note that you best try to be specific otherwise the dataset can become huge
+params.split       = 0.8 //this is the split in which the data will be divided as in 80% training set and 20% validation set, 
+//if put to 100% then all data is used for training, you can manually fill in a rawdata_val.csv to make a prediction of a new study
 params.container  = 'community.wave.seqera.io/library/r-ctrdata_r-dbi_r-dplyr_r-duckdb_pruned:7bf0df866893c97c'
 ```
 

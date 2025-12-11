@@ -1,0 +1,100 @@
+"_id","eudractNumber","e811_randomised","e814_double_blind","e112_therapeutic_area","e11_medical_conditions_being_investigated","adverseEvents.reportingGroups.reportingGroup.subjectsExposed","adverseEvents.nonSeriousAdverseEvents.nonSeriousAdverseEvent","adverseEvents.reportingGroups.reportingGroup.deathsAllCauses"
+"2005-000137-37-CZ","2005-000137-37",TRUE,TRUE,NA,"Moderately emetogenic chemotherapy induced nausea and vomiting",NA,NA,NA
+"2005-003976-39-DE","2005-003976-39",FALSE,FALSE,NA,"Patients with essential hypertension",NA,NA,NA
+"2005-005697-71-BE","2005-005697-71",TRUE,FALSE,"Diseases C - Blood and lymphatic diseases C15","Subjects with Severe or Moderately Severe Hemophilia A baseline factor VIII FVIII level  2 of normal hemophilia A undergoing major orthopedic surgery","72",95,"1"
+"2006-001434-41-BE","2006-001434-41",TRUE,FALSE,NA,"Chronic renal anemia",NA,NA,NA
+"2006-001955-37-ES","2006-001955-37",TRUE,TRUE,NA,"Chronic Obstructive Pulmonary Disease COPD",NA,NA,NA
+"2006-002529-21-ES","2006-002529-21",FALSE,FALSE,NA,"Pacientes con cncer de mama metastsico CMm o localmente recurrente LR HER2 negativo que no han recibido quimioterapia previa para el CMm o LC. Locally recurrent or metastatic breast cancer.",NA,NA,NA
+"2006-004514-40-GB","2006-004514-40",TRUE,TRUE,NA,"Pain",NA,NA,NA
+"2006-005047-28-DE","2006-005047-28",TRUE,TRUE,NA,"The current study will support an indication for rivoglitazone as oral monotherapy to improve glycemic control in subjects with type 2 diabetes mellitus not adequately controlled with diet and exercise alone.",NA,NA,NA
+"2006-005455-15-ES","2006-005455-15",TRUE,TRUE,NA,"Sindrome Muckle-Wells  Enfermedad Autoinflamatoria","15 / 35 / 16 / 31 / 35",2,"0 / 0 / 0 / 0 / 0"
+"2006-005911-82-DE","2006-005911-82",TRUE,TRUE,"Diseases C - Respiratory Tract Diseases C08","IgE-mediated allergic disease manifested as symptoms of allergic rhinitis/rhinoconjunctivitis with or without allergic bronchial asthma GINA I und II triggered by grass pollen allergens.","158 / 49 / 52 / 22 / 158 / 46 / 85 / 23",35,"0 / 0 / 0 / 0 / 0 / 0 / 0 / 0"
+"2007-000636-13-DE","2007-000636-13",TRUE,TRUE,NA,"Erythropoietic Protoporphyria EPP",NA,NA,NA
+"2007-002997-72-ES","2007-002997-72",TRUE,TRUE,NA,"Cncer de mama metastsico HER2 positivo HER2 positive metastatic breast cancer","396 / 408 / 50",309,"261 / 238 / 14"
+"2007-005182-35-BE","2007-005182-35",TRUE,FALSE,NA,"Resected node-positive or high risk node-negative, invasive HER2-positive breast cancer.","289 / 286 / 1461 / 1436 / 1750 / 1722",548,"10 / 15 / 49 / 46 / 14 / 14"
+"2007-007861-19-PL","2007-007861-19",TRUE,FALSE,NA,"This study looks into the therapy of major bleeding resulting from an acquired deficiency of vitamin K-dependant coagulation factors and proteins C and S due to use of oral anticoagulation therapy.",NA,NA,NA
+"2008-000533-22-BE","2008-000533-22",TRUE,TRUE,NA,"Chronic genotype 1 Hepatitis C infection",NA,NA,NA
+"2008-002758-39-DE","2008-002758-39",TRUE,TRUE,NA,"Alzheimers Disease",NA,NA,NA
+"2008-005149-48-FI","2008-005149-48",TRUE,TRUE,"Diseases C - Bacterial Infections and Mycoses C01","Active immunization of children from the age of 6 weeks up to 18 months of age at the time of first vaccination, against Streptococcus pneumoniae serotypes 1, 4, 5, 6B, 7F, 9V, 14, 18C, 19F, 23F and Haemophilus influenzae. The immunization schedule will depend on the age at the time of the first vaccination.","8427 / 9112 / 3020 / 1812 / 6249 / 8872 / 3689",NA,"4 / 4 / 1 / 0 / 0 / 3 / 0"
+"2008-005713-22-ES","2008-005713-22",TRUE,FALSE,NA,"Tratamiento de pacientes con cncer de mama HER-2 positivo localmente avanzado o metastsico que hayan recibido un taxano y trastuzumab tras progresin de la enfermedad.","490 / 488 / 136",118,"305 / 277 / 55"
+"2008-006551-51-FI","2008-006551-51",TRUE,TRUE,"Diseases C - Bacterial Infections and Mycoses C01","Active immunization of children from the age of 6 weeks up to 18 months of age at the time of first vaccination, against Streptococcus pneumoniae serotypes 1, 4, 5, 6B, 7F, 9V, 14, 18C, 19F, 23F and Haemophilus influenzae. The immunization schedule will depend on the age at the time of the first vaccination.","1069 / 859 / 1849 / 271 / 241 / 204 / 1316 / 368",435,"0 / 0 / 0 / 0 / 0 / 0 / 1 / 0"
+"2008-006801-17-BE","2008-006801-17",TRUE,FALSE,"Diseases C - Cancer C04","HER2 positive metastatic breast cancer which has progressed after one line of trastuzumab-based therapy in the metastatic setting","218 / 228",285,"136 / 134"
+"2008-007926-21-ES","2008-007926-21",TRUE,TRUE,NA,"Alzheimers Disease Enfermedad de Alzheimer",NA,NA,NA
+"2009-012203-26-BE","2009-012203-26",TRUE,TRUE,"Diseases C - Respiratory Tract Diseases C08","Survival of extremely Low Birth Weight ELBW infants has improved in recent decades but Bronchopulmonary Dysplasia BPD remains a major health care problem. BPD is a chronic lung disease that occurs in premature infants requiring mechanical ventilation and oxygen therapy, but also develops in preterm neonates who require little or no ventilatory or oxygen support",NA,NA,NA
+"2009-013864-37-HU","2009-013864-37",TRUE,TRUE,NA,"acute soft tissue injury minor traumatism such as: sprain, strain, dislocation,...etc. or contusion",NA,NA,NA
+"2009-015476-98-BE","2009-015476-98",TRUE,FALSE,"Diseases C - Cancer C04","patients with metastatic HER2 over-expressing breast cancer","337 / 169 / 75",190,"235 / 111 / 3"
+"2009-017905-13-BE","2009-017905-13",TRUE,TRUE,"Diseases C - Cancer C04","First line treatment in HER2 positive progressive or recurrent locally advanced or metastatic breast cancer MBC","361 / 353 / 366",497,"174 / 170 / 170"
+"2009-018161-12-BE","2009-018161-12",TRUE,TRUE,"Diseases C - Nervous System Diseases C10","Attention-Deficit/Hyperactive Disorder ADHD","526 / 158 / 157",71,"0 / 0 / 0"
+"2010-018579-12-ES","2010-018579-12",TRUE,TRUE,NA,"Attention-Deficit/Hyperactivity Disorder ADHD Trastorno por dficit de atencin con hiperactividad","114 / 112 / 111",58,"0 / 0 / 0"
+"2010-019577-16-BE","2010-019577-16",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive metastatic breast cancer who have received trastuzumab and endocrine therapy in the neoadjuvant and/or adjuvant setting","123 / 121 / 123",25,"5 / 5 / 8"
+"2010-021715-17-BE","2010-021715-17",TRUE,TRUE,"Diseases C - Virus Diseases C02","Chronic hepatitis C infection genotype 1","145 / 140 / 158 / 156 / 78",106,"3 / 0 / 2 / 2 / 0"
+"2010-022902-41-BE","2010-022902-41",TRUE,TRUE,"Diseases C - Cancer C04","Patients with operable HER2-positive primary breast cancer","2405 / 2364",546,"253 / 197"
+"2010-024238-46-DE","2010-024238-46",TRUE,FALSE,"Diseases C - Cancer C04","Patients with initially HER2-negative metastatic breast cancer and HER2-positive circulating tumor cells","48 / 53",48,"40 / 33"
+"2011-000509-29-BE","2011-000509-29",TRUE,FALSE,"Diseases C - Cancer C04","HER2-Positive Metastatic Breast Cancer MBC","403 / 184 / 94",71,"247 / 67 / 55"
+"2011-000739-97-AT","2011-000739-97",TRUE,FALSE,"Diseases C - Cancer C04","Homeopathic remedies as add on therapie in cancer",NA,NA,NA
+"2011-001180-53-BE","2011-001180-53",TRUE,TRUE,"Diseases C - Virus Diseases C02","Hepatitis C Virus HCV genotype-1 infection","384 / 379",287,"4 / 0"
+"2011-001965-42-ES","2011-001965-42",TRUE,TRUE,"Diseases C - Cancer C04","Human Epidermal Growth Factor Receptor 2 positive HER2+ metastatic breast cancer MBC","246 / 247 / 164 / 179",103,"4 / 4 / 0 / 2"
+"2011-004724-35-BE","2011-004724-35",FALSE,FALSE,"Diseases C - Virus Diseases C02","Chronic hepatitis C infection","24 / 50",37,"0 / 0"
+"2011-005328-17-ES","2011-005328-17",FALSE,FALSE,"Diseases C - Cancer C04","HER2-positive primary breast cancer","1864 / 1862 / 707 / 709",513,"28 / 98 / 45 / 6"
+"2011-005334-20-BE","2011-005334-20",FALSE,FALSE,"Diseases C - Cancer C04","Advanced breast cancer metastatic or locally recurrent","1436",13706,"658"
+"2011-005422-21-ES","2011-005422-21",NA,NA,"Diseases C - Virus Diseases C02","Chronic Hepatitis C Virus Infection Genotypes 1 and 4","354 / 44",165,"0 / 0"
+"2011-005446-35-ES","2011-005446-35",TRUE,TRUE,"Diseases C - Virus Diseases C02","HEPATITIS C VIRUS","205 / 235 / 205",34,"0 / 0 / 0"
+"2011-005740-95-BE","2011-005740-95",FALSE,FALSE,"Diseases C - Virus Diseases C02","Chronic Hepatitis C Infection","91 / 95",10,"0 / 0"
+"2012-000171-17-DE","2012-000171-17",FALSE,FALSE,"Diseases C - Nutritional and Metabolic Diseases C18","Treatment of Hyperphosphataemia.","20 / 52 / 53",1,"0 / 0 / 0"
+"2012-001628-37-BE","2012-001628-37",FALSE,FALSE,"Diseases C - Cancer C04","HER2-positive metastatic breast cancer","2002 / 181",200,"1072 / 77"
+"2012-002018-37-BE","2012-002018-37",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive primary breast cancer.","720 / 740",385,"126 / 94"
+"2012-003442-32-FR","2012-003442-32",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive metastatic breast cancer","108 / 113 / 111",37,"1 / 1 / 0"
+"2012-003738-18-PL","2012-003738-18",TRUE,FALSE,"Diseases C - Virus Diseases C02","Chronic Hepatitis C Infection","101 / 47",17,"1 / 0"
+"2012-004492-38-BE","2012-004492-38",TRUE,FALSE,"Diseases C - Cancer C04","HER2+ Metastatic Breast Cancer","303 / 311",39,"216 / 240"
+"2012-004902-82-BE","2012-004902-82",TRUE,FALSE,"Diseases C - Cancer C04","HER2-positive operable primary breast cancer.","912 / 926",1227,"55 / 45"
+"2012-005563-27-ES","2012-005563-27",TRUE,FALSE,"Body processes G - Metabolic Phenomena G03","Alcohol-induced liver decompensation AILD","95 / 108",59,"38 / 42"
+"2013-000123-13-BE","2013-000123-13",FALSE,FALSE,"Diseases C - Cancer C04","TO INVESTIGATE THE AT HOME ADMINISTRTATION  OF TRASTUZUMAB SUBCUTANEOUS VIAL FOR THE TREATMENT OF PATIENTS WITH HER2-POSITIVE EARLY BREAST CANCER.","101",62,"2"
+"2013-000829-31-NL","2013-000829-31",FALSE,FALSE,"Diseases C - Cancer C04","HER2-positive early breast cancer","125",484,"2"
+"2013-000918-37-BE","2013-000918-37",TRUE,TRUE,"Diseases C - Immune System Diseases C20","Thrombocytopenic patients with myelodysplastic syndromes","177 / 177",51,"33 / 29"
+"2013-001161-16-IT","2013-001161-16",FALSE,FALSE,"Diseases C - Cancer C04","EARLY AND LOCALLY ADVANCED HER2-POSITIVE BREAST CANCER","95 / 20 / 92 / 21",28,"5 / 1 / 0 / 1"
+"2013-001352-34-ES","2013-001352-34",TRUE,TRUE,"Diseases C - Cancer C04","Metastatic Breast Cancer","349 / 353",256,"52 / 60"
+"2013-001744-65-BE","2013-001744-65",TRUE,TRUE,"Diseases C - Digestive System Diseases C06","Mild to Moderate Ulcerative Colitis","27 / 26 / 18 / 42 / 45",2,"0 / 0 / 0 / 0 / 0"
+"2013-003858-25-ES","2013-003858-25",TRUE,TRUE,"Diseases C - Virus Diseases C02","Hepatitis C","122 / 113 / 102",9,"2 / 4 / 1"
+"2013-004837-34-GB","2013-004837-34",FALSE,FALSE,"Diseases C - Cancer C04","Lung Cancer","22",21,"4"
+"2014-001458-40-BE","2014-001458-40",FALSE,FALSE,"Diseases C - Cancer C04","HER2POSITIVE METASTATIC OR LOCALLY RECURRENT ADVANCED BREAST CANCER","412",2791,"87"
+"2014-001496-31-BE","2014-001496-31",TRUE,FALSE,"Diseases C - Virus Diseases C02","Hepatitis C Infection","60 / 60 / 61 / 3",26,"0 / 1 / 0 / 0"
+"2014-002568-33-DE","2014-002568-33",TRUE,TRUE,"Diseases C - Nutritional and Metabolic Diseases C18","Diabetes Mellitus, Type 1","261 / 258 / 258",37,"0 / 0 / 0"
+"2014-003438-20-BE","2014-003438-20",TRUE,FALSE,"Diseases C - Cancer C04","Platinum Sensitive Relapsed Ovarian Cancer","178 / 76",106,"116 / 46"
+"2014-003836-38-ES","2014-003836-38",TRUE,FALSE,"Diseases C - Virus Diseases C02","Hepatitis C","129 / 126",16,"0 / 0"
+"2015-000380-13-BE","2015-000380-13",TRUE,FALSE,"Diseases C - Cancer C04","Metastatic or Locally Advanced HER2-positive Breast Cancer","264 / 266 / 88",143,"204 / 202 / 62"
+"2015-001047-36-DE","2015-001047-36",TRUE,TRUE,"Diseases C - Nutritional and Metabolic Diseases C18","Diabetes Mellitus, Type 1","341 / 342 / 342",193,"0 / 0 / 0"
+"2015-002478-19-ES","2015-002478-19",TRUE,TRUE,"Diseases C - Cardiovascular Diseases C14","hereditary angioedema","57 / 71",14,"0 / 0"
+"2015-002868-17-ES","2015-002868-17",TRUE,FALSE,"Diseases C - Cardiovascular Diseases C14","Secondary Prevention of Major Cardiovascular Events cardiovascular death, nonfatal myocardial infarction, nonfatal ischemic stroke, and urgent revascularization in post MI cohort.","1229 / 1237",106,"117 / 115"
+"2015-003594-14-BE","2015-003594-14",TRUE,TRUE,"Diseases C - Cancer C04","Dedifferentiated Liposarcoma DDLS","27 / 30 / 24 / 97 / 63 / 187",174,"18 / 25 / 20 / 67 / 43 / 127"
+"2016-001432-35-BE","2016-001432-35",TRUE,TRUE,"Diseases C - Cancer C04","Triple-Negative Breast Cancer","13 / 10 / 281 / 562 / 12 / 11",456,"11 / 9 / 249 / 480 / 5 / 9"
+"2016-002320-83-BE","2016-002320-83",TRUE,FALSE,"Diseases C - Nutritional and Metabolic Diseases C18","Early onset pro-opiomelanocortin deficiency obesity","15",208,"0"
+"2016-002453-38-BE","2016-002453-38",TRUE,FALSE,"Diseases C - Cancer C04","Metastatic breast cancer with stable brain metastases","90 / 77",85,"60 / 57"
+"2016-004340-11-BE","2016-004340-11",TRUE,FALSE,"Diseases C - Cancer C04","mRNA FGF receptor 1 and 3 positive locally advanced or metastatic urothelial carcinoma progressed after prior platinum-containing chemotherapy","86 / 82",22,"47 / 45"
+"2017-001994-18-BE","2017-001994-18",TRUE,FALSE,"Diseases C - Cancer C04","breast tumours","288 / 137",113,"181 / 94"
+"2017-002005-36-DE","2017-002005-36",FALSE,FALSE,"Diseases C - Nutritional and Metabolic Diseases C18","Early Onset Leptin Receptor LEPR Deficiency Obesity due to Bi-Allelic Loss-of-Function LEPR Genetic Mutation","15",245,"1"
+"2017-003170-13-FR","2017-003170-13",FALSE,FALSE,"Body processes G - Metabolic Phenomena G03","Homozygous familial hypercholesterolemia","116",243,"2"
+"2018-000221-31-BE","2018-000221-31",TRUE,FALSE,"Diseases C - Cancer C04","Unresectable/metastatic breast cancer with human epidermal growth factor receptor 2 HER2-positive expression","404 / 87 / 108",140,"143 / 40 / 46"
+"2018-000222-61-BE","2018-000222-61",TRUE,FALSE,"Diseases C - Cancer C04","Unresectable/metastatic breast cancer with human epidermal growth factor receptor 2 HER2-positive expression","257 / 261",144,"72 / 97"
+"2018-000648-25-DE","2018-000648-25",FALSE,FALSE,"Diseases C - Nutritional and Metabolic Diseases C18","Phenylketonuria PKU",NA,NA,NA
+"2018-000740-25-IT","2018-000740-25",TRUE,FALSE,"Diseases C - Cancer C04","Hepatocellular carcinoma","55 / 56",1,"0 / 1"
+"2018-001749-15-DE","2018-001749-15",TRUE,TRUE,"Diseases C - Immune System Diseases C20","Peanut Allergy","98 / 48",8,"0 / 0"
+"2018-003069-33-BE","2018-003069-33",TRUE,FALSE,"Diseases C - Cancer C04","Unresectable and/or metastatic breast cancer that is human epidermal growth factor receptor 2 HER2-low","371 / 172",181,"149 / 90"
+"2019-001931-30-NL","2019-001931-30",FALSE,FALSE,"Body processes G - Metabolic Phenomena G03","Homozygous familial hypercholesterolemia","6 / 14 / 6 / 14",4,"0 / 0 / 0 / 0"
+"2020-002818-41-DE","2020-002818-41",TRUE,TRUE,"Diseases C - Cancer C04","Locally advanced / metastatic breast cancer","47 / 49",4,"6 / 3"
+"2021-000398-10-BE","2021-000398-10",TRUE,TRUE,"Diseases C - Cancer C04","Breast cancer",NA,NA,NA
+"2021-003668-29-FR","2021-003668-29",TRUE,TRUE,"Diseases C - Congenital, Hereditary, and Neonatal Diseases and Abnormalities C16","Congenital Adrenal Hyperplasia due to 21-hydroxylase deficiency","28 / 25",4,"0 / 0"
+"2004-000480-10-ES",NA,TRUE,FALSE,NA,"Non-Hodgkins Lymphoma",NA,NA,NA
+"2005-002084-85-DK",NA,TRUE,FALSE,NA,"Patients with HER2 positive metastatic breast cancer and progression after previous treatment with trastuzumab",NA,NA,NA
+"2005-002402-36-GB",NA,FALSE,NA,NA,"Alpha-1 Antitrypsin AAT deficiency",NA,NA,NA
+"2005-003242-34-ES",NA,TRUE,TRUE,"Diseases C - Nervous System Diseases C10","Secondary prevention of small subcortical strokes",NA,NA,NA
+"2006-006130-17-BE",NA,TRUE,FALSE,NA,"Patients 18 - 60 years old with newly diagnosed non-cutanous, non leukemic Peripheral T- cell lymphoma, except alk-protein positive and negative anaplastic large cell lymphoma.",NA,NA,NA
+"2011-005189-39-ES",NA,TRUE,FALSE,"Diseases C - Cancer C04","HER 2 - positive metastatic breast cancer",NA,NA,NA
+"2012-000550-60-AT",NA,TRUE,TRUE,"Diseases C - Congenital, Hereditary, and Neonatal Diseases and Abnormalities C16","Autosomal dominant polycystic kidney disease ADPKD is a genetic disorder characterized by the development and uncontrolled proliferation of innumerable epithelial-lined cysts that stem from renal tubular cells, which compress and/or destroy vital renal tissue with a gradual decline in renal function, and terminal kidney failure with the need for renal reaplacement therapy. As yet, other than supportive care there is no viable therapy.",NA,NA,NA
+"2013-001870-38-ES",NA,TRUE,TRUE,"Diseases C - Respiratory Tract Diseases C08","Pulmonary Emphysema due to Alpha-1-Antitrypsin Deficiency",NA,NA,NA
+"2014-000259-99-BE",NA,TRUE,FALSE,"Diseases C - Cancer C04","Recurrent and refractory Ewing sarcoma",NA,NA,NA
+"2014-002249-22-DE",NA,TRUE,FALSE,"Diseases C - Cancer C04","Patients with HER2-positive and hormone-receptor positive metastatic breast cancer",NA,NA,NA
+"2019-002741-37-BE",NA,TRUE,TRUE,"Diseases C - Cancer C04","HER2-positive advanced breast cancer",NA,NA,NA
+"2020-005048-46-BE",NA,FALSE,FALSE,"Diseases C - Cancer C04","Treatment of patients with HER2-positive breast cancer with or without brain metastasis",NA,NA,NA
+"2021-000045-41-FR",NA,TRUE,TRUE,"Diseases C - Respiratory Tract Diseases C08","Covid-19",NA,NA,NA
+"2021-000291-11-AT",NA,FALSE,FALSE,"Diseases C - Virus Diseases C02","Vaccination against SARS-CoV-2 in immunocompromised patients",NA,NA,NA
+"2021-005120-38-FR",NA,TRUE,TRUE,"Diseases C - Eye Diseases C11","Active Non-infectious Anterior Uveitis including Uveitic Glaucoma",NA,NA,NA

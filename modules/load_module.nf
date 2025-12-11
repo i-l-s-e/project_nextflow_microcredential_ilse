@@ -3,8 +3,7 @@ process install{
     publishDir params.outdir, mode: 'copy'
     container params.container
     
-    input:
-    path(scriptsdir)
+
   
     output:
     path "clinicaltrials.duckdb", emit: db_file
@@ -12,7 +11,7 @@ process install{
 
     script:
     """
-    Rscript ${scriptsdir}/install.R  .
+    Rscript ${params.scriptsdir}/install.R  .
     """
 }
 
@@ -25,7 +24,8 @@ process download_data {
     
     input:
     path(db_file)
-    path(scriptsdir)
+    val cond
+
    
    
 
@@ -35,28 +35,28 @@ process download_data {
 
     script:
     """
-    Rscript ${scriptsdir}/fetch_data.R ${db_file}  .
+    Rscript ${params.scriptsdir}/fetch_data.R ${db_file}  . ${cond}
     """
 }
 
 
 process convert_data {
 
+    label 'R'
     publishDir params.outdir, mode: 'copy'
-    container params.container
-    
+
     input:
      path(db_file)
-     path(scriptsdir)
+     val (split)
      
     
 
     output:
       path "rawdata.csv", emit: raw_file
-    
+      path "rawdata_val.csv", emit: raw_val_file
 
     script:
     """
-     Rscript ${scriptsdir}/init_db.R ${db_file} .
+     Rscript ${params.scriptsdir}/init_db.R ${db_file} . ${split}
     """
 }

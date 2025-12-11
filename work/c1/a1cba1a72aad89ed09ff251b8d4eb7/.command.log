@@ -1,0 +1,112 @@
+Warning: Your system is mis-configured: ‘/var/db/timezone/localtime’ is not a symlink
+Warning: ‘/var/db/timezone/localtime’ is not identical to any known timezone file
+
+Information on this package and how to use it:
+https://cran.r-project.org/package=ctrdata
+
+Please respect the requirements and the copyrights of the
+clinical trial registers when using their information. Call
+ctrOpenSearchPagesInBrowser(copyright = TRUE) and visit
+
+https://www.clinicaltrialsregister.eu/disclaimer.html
+https://clinicaltrials.gov/about-site/terms-conditions#usage
+https://www.isrctn.com/page/faqs#using-the-isrctn
+https://euclinicaltrials.eu/about-this-website/
+
+Please cite this package, see citation("ctrdata").
+
+1.25.1
+Warning message:
+Failed to locate timezone database 
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+Attaching package: ‘nodbi’
+
+The following objects are masked from ‘package:dplyr’:
+
+    src_postgres, src_sqlite
+
+Loading required package: DBI
+
+Attaching package: ‘purrr’
+
+The following object is masked from ‘package:jsonlite’:
+
+    flatten
+
+* Found search query from EUCTR: query=HER2-positive&phase=phase-three&status=completed
+* Checking trials in EUCTR..., found 56 trials 
+- Downloading in 3 batch(es) (20 trials each; estimate: 7 MB)
+[working] (0 + 0) -> 2 -> 1 | ■■■■■■■■■■■                       33%
+[working] (0 + 0) -> 0 -> 3 | ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100%
+- Downloading 56 records of 56 trials (estimate: 3 s)
+[working] (4 + 0) -> 10 -> 42 | ■■■■■■■■■■■■■■■■■■■■■■■           75%
+[working] (0 + 0) -> 0 -> 56 | ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100%
+- Converting to NDJSON (estimate: 0.2 s)... 
+- Importing records into database...
+JSON file #: 1 / 2                               JSON file #: 2 / 2                               = Imported or updated 56 records on 56 trial(s)
+* Checking results if available from EUCTR for 56 trials: 
+- Downloading results...
+[working] (35 + 0) -> 10 -> 11 | ■■■■■■■                           20%
+[working] (11 + 0) -> 10 -> 35 | ■■■■■■■■■■■■■■■■■■■■              62%
+[working] (0 + 0) -> 0 -> 56 | ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  100%
+- Extracting results (. = data, F = file[s] and data, x = none): . . . . . . . . . . . F . F . . F . . . F F . . . . . . . . . . . . . . . . . . . . . . . . F 
+- Data found for 47 trials
+- Converting to NDJSON (estimate: 1 s)...
+- Importing 47 results into database (may take some time)...
+1 trial records updated with results2 trial records updated with results3 trial records updated with results4 trial records updated with results5 trial records updated with results6 trial records updated with results7 trial records updated with results8 trial records updated with results9 trial records updated with results10 trial records updated with results11 trial records updated with results12 trial records updated with results13 trial records updated with results14 trial records updated with results15 trial records updated with results16 trial records updated with results17 trial records updated with results18 trial records updated with results19 trial records updated with results20 trial records updated with results21 trial records updated with results22 trial records updated with results23 trial records updated with results24 trial records updated with results25 trial records updated with results26 trial records updated with results27 trial records updated with results28 trial records updated with results29 trial records updated with results30 trial records updated with results31 trial records updated with results32 trial records updated with results33 trial records updated with results34 trial records updated with results35 trial records updated with results36 trial records updated with results37 trial records updated with results38 trial records updated with results39 trial records updated with results40 trial records updated with results41 trial records updated with results42 trial records updated with results43 trial records updated with results44 trial records updated with results45 trial records updated with results46 trial records updated with results47 trial records updated with results- Results history: not retrieved (euctrresultshistory = FALSE)
+= Imported or updated results for 47 trials
+No history found in expected format.
+Updated history ("meta-info" in "studies")
+[[1]]
+[[1]]$n
+[1] 56
+
+[[1]]$success
+ [1] "2011-005328-17-ES" "2012-001628-37-BE" "2010-022902-41-BE"
+ [4] "2013-000123-13-BE" "2017-004897-32-BE" "2011-000509-29-BE"
+ [7] "2012-004879-38-BE" "2012-003442-32-FR" "2013-001161-16-IT"
+[10] "2013-000829-31-NL" "2012-003554-83-BE" "2010-024238-46-DE"
+[13] "2014-001458-40-BE" "2006-001707-11-NL" "2019-002741-37-BE"
+[16] "2011-004714-41-DE" "2018-001881-40-ES" "2014-002249-22-DE"
+[19] "2013-004679-11-IT" "2006-002529-21-ES" "2007-002997-72-ES"
+[22] "2013-004525-84-ES" "2017-001994-18-BE" "2014-000619-14-DE"
+[25] "2011-005189-39-ES" "2012-003679-21-DE" "2007-001826-28-GB"
+[28] "2008-005713-22-ES" "2009-015476-98-BE" "2012-000660-22-BE"
+[31] "2019-004699-21-DE" "2013-001352-34-ES" "2011-005334-20-BE"
+[34] "2007-005182-35-BE" "2012-002018-37-BE" "2018-000221-31-BE"
+[37] "2012-004902-82-BE" "2016-003984-20-DE" "2018-003069-33-BE"
+[40] "2018-000236-97-HU" "2009-017905-13-BE" "2016-001432-35-BE"
+[43] "2012-004492-38-BE" "2015-000380-13-BE" "2020-005048-46-BE"
+[46] "2021-000603-21-ES" "2011-001965-42-ES" "2020-004035-24-BE"
+[49] "2016-002453-38-BE" "2010-019577-16-BE" "2005-002084-85-DK"
+[52] "2020-002818-41-DE" "2007-002016-26-FI" "2018-000222-61-BE"
+[55] "2008-006801-17-BE" "2021-000398-10-BE"
+
+[[1]]$failed
+NULL
+
+[[1]]$queryterm
+[1] "query=HER2-positive&phase=phase-three&status=completed"
+
+attr(,"ctrdata-dbname")
+[1] "/kyukon/scratch/gent/503/vsc50317/project_nextflow_microcredential_ilse/work/90/10b09567df86f1688ae68906876ced/clinicaltrials.duckdb"
+attr(,"ctrdata-collection")
+[1] "studies"
+attr(,"ctrdata-dbqueryhistory")
+# A tibble: 1 × 4
+  `query-timestamp`   `query-register` `query-records` `query-term`             
+  <chr>               <chr>                      <int> <chr>                    
+1 2025-12-11 21:26:59 EUCTR                         56 query=HER2-positive&phas…
+
+nodbi: docdb_src 'db' disconnected and shut down. 

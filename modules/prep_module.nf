@@ -5,7 +5,7 @@ process preprocess {
     
     input:
      path(csvfile)
-     path(scriptsdir)
+
      
 
     output:
@@ -13,6 +13,6 @@ process preprocess {
 
     script:
     """
-     Rscript ${scriptsdir}/preprocess.R ${csvfile} .
+     Rscript ${params.scriptsdir}/preprocess.R ${csvfile} .
     """
 }

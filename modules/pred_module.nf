@@ -4,13 +4,13 @@ process predict {
   input:
   path(csvfile2)
   path(model_file)
-  path(scriptsdir)
+
 
   output:
   path "results.csv", emit: res_file
 
   script:
   """
-  Rscript ${scriptsdir}/predict.R ${csvfile2} ${model_file} .
+  Rscript ${params.scriptsdir}/predict.R ${csvfile2} ${model_file} .
   """
 }
